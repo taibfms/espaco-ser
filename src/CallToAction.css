@@ -1,33 +1,36 @@
 .cta-section {
-    background-color: #44ABB6; 
-    padding: 0.5rem 1rem;
-    text-align: center;
-    font-family: "Playfair Display", serif;
-   
-  }
-  
+  background-color: #44ABB6;
+  padding: 1rem; /* Ajusta o padding para maior espaçamento */
+  display: flex; /* Adiciona flexbox */
+  flex-direction: column; /* Mantém o conteúdo em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  height: 100%; /* Garante altura total do conteúdo */
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.cta-content p {
+  font-size: 1rem;
+  color: #ffffff; /* Alterado para melhor visibilidade no fundo */
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
   .cta-content h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-weight: bold;
+    font-size: 1.2rem;
   }
-  
+
   .cta-content p {
-    font-size: 0.8rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto; 
+    font-size: 0.8rem; /* Ajustado para legibilidade em telas menores */
   }
-  
-  @media (max-width: 768px) {
-    .cta-content h2 {
-      font-size: 1.2rem;
-    }
-  
-    .cta-content p {
-      font-size: 0.5rem;
-    }
-  }
-  
+}

@@ -44,26 +44,37 @@ const ImageHoverEffect = () => {
       <div className="image-container">
         {[
           {
-            title: 'Psicoterapia Infantil, Pré e Adolescente',
+            title: 'Psicoterapia Infantil - Atendimento de criança, pré adolescente e adolescente',
+            className: 'specialone-title', // Classe específica para o título
             description:
-              'Foco no bem-estar emocional e social de crianças, oferecendo suporte em desenvolvimento, comunicação e comportamento.',
+              'Foco no bem-estar emocional e social de crianças, pré adolescentes e adolescentes, oferecendo suporte em desenvolvimento, comunicação e comportamento.',
             whatsappLink:
               'https://wa.me/5511914262013?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia%20para%20crianças,%20pré-adolescentes%20e%20adolescentes.%20Poderiam%20me%20enviar%20mais%20informações,%20por%20favor?',
-          },
+              linkClassName: 'whatsapp-link-imgh'
+          
+            },
           {
-            title: 'Psicanálise',
+            title: 'Psicanálise - Atendimento Clínico',
+            className: 'specialtwo-title',
+      
             description:
-              'A psicanálise baseia-se na escuta atenta e na fala livre, explorando subjetividade e como as experiências ressoam internamente no analisando.',
+              'A psicanálise fundamenta-se na escuta atenta e na nossa fala livre, explorando a subjetividade humana e como todas as experiências vividas ressoam internamente nos analisados.',
             whatsappLink:
-              'https://wa.me/5511914262013?text=Olá,%20estou%20interessado(a)%20no%20atendimento%20psicanalítico%20oferecido%20por%20vocês.%20Poderiam%20me%20explicar%20como%20funciona%20e%20como%20agendar?',
+           'https://wa.me/5511914262013?text=Olá,%20estou%20interessado(a)%20no%20atendimento%20psicanalítico%20oferecido%20por%20vocês.%20Poderiam%20me%20explicar%20como%20funciona%20e%20como%20agendar?',
+             linkClassName: 'whatsapp-link-imgh'
+          
           },
           {
-            title: 'Cursos',
+            title: 'Curso de Formação em Psicanálise',
+            className: 'specialthree-title', // Classe específica para o título
+            
             description:
-              'O Espaço do Ser em parceria com o Instituto Escutarte, oferece formação psicanalítica focada em Freud, Lacan, prática clínica e aprendizagem contínua.',
+              "O Espaço d'(O) SER em parceria com o Instituto Escut'arte, oferece uma formação psicanalítica focada em Freud, Lacan, prática clínica e aprendizagem contínua.",
             whatsappLink:
               'https://wa.me/5511914262013?text=Olá,%20quero%20saber%20mais%20detalhes%20sobre%20o%20curso%20de%20formação%20em%20psicanálise.%20Como%20funciona?%20Poderiam%20me%20enviar%20as%20informações?',
-          },
+               linkClassName: 'whatsapp-link-imgh'
+          
+            },
         ].map((content, index) => (
           <div
             className="image-wrapper"
@@ -75,9 +86,10 @@ const ImageHoverEffect = () => {
             <img src={images[index]} alt={`Imagem ${index + 1}`} />
             {(isMobile ? activeImage === index : activeImage === index) && (
               <div className="image-text">
-                <h3>{content.title}</h3>
+                {/* Adiciona a classe se existir */}
+                <h3 className={content.className || ''}>{content.title}</h3>
                 <p>{content.description}</p>
-                <a href={content.whatsappLink} target="_blank" rel="noopener noreferrer">
+                <a href={content.whatsappLink} target="_blank" rel="noopener noreferrer"  className="whatsapp-link-imgh">
                   Saiba Mais
                 </a>
               </div>

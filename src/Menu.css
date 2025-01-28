@@ -1,89 +1,124 @@
+/* Estilos gerais do menu */
 .menu {
-    display: flex; /* Flexbox para o menu */
-    justify-content: space-between; /* Espaça logo e menu */
-    align-items: center; /* Centraliza verticalmente */
-    background-color: #fff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    padding: 10px 20px; 
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color:  #f9f9f9;
+  margin-bottom: -40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px; /* Aumentado para equilibrar o aumento da logo e fonte */
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necessário para o posicionamento do dropdown */
 }
 
-.logo img {
-    max-height: 100px; /* Limita a altura da logo */
+/* Estilos para a logo */
+.logo {
+  margin-top: -40px;
+  display: flex;
+  align-items: center;
 }
 
+.logo-img {
+  max-height: 130px; /* Aumentado */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Ícone de menu para dispositivos móveis */
+.toggle-menu {
+  margin-top: -40px;
+  display: none; /* Escondido por padrão */
+  cursor: pointer;
+  z-index: 10; /* Garante que fique acima do menu dropdown */
+}
+
+.menu-icon {
+  max-height: 35px; /* Proporcional ao aumento geral */
+  width: auto;
+}
+
+/* Itens do menu em telas grandes */
 .menu-items {
-    display: flex; /* Mostra o menu em telas grandes */
-    flex-direction: row; /* Alinha itens horizontalmente */
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .menu-items ul {
-    display: flex; /* Flexbox para os itens do menu */
-    margin: 0; 
-    padding: 0; 
-    font-size: larger;
-    list-style: none; /* Remove os marcadores dos itens do menu */
+ 
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
 }
 
 .menu-items li {
-    margin: 10px;
+  margin: 0 15px; /* Aumentado para equilibrar o tamanho da fonte */
+  font-size: 22px; /* Aumentado */
 }
 
 .menu-items a {
-    text-decoration: none; 
-    color: #333; /* Cor do texto */
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .menu-items a:hover {
-    color: #007BFF; 
-    transition: color 0.3s; 
+  color: #007BFF;
 }
 
-.toggle-menu {
-    display: none; /* Esconde o ícone do menu por padrão */
-}
-
+/* Divisores verticais entre os itens */
 .divider-vertical {
-    width: 2px;
-    height: 20px; /* Tamanho da linha divisória */
-    background-color: #44ABB6;
-    align-self: center; /* Centraliza verticalmente */
+  width: 3px; /* Proporcional ao tamanho da fonte e layout */
+  height: 30px; /* Proporcional ao aumento */
+  background-color: #44ABB6;
 }
 
+/* Dropdown em telas menores */
 @media (max-width: 768px) {
-    .menu-items {
-        display: none; /* Esconde o menu por padrão em telas menores */
-        flex-direction: column; /* Alinha itens verticalmente em telas menores */
+  .toggle-menu {
+  
+   display: block; /* Exibe o ícone de menu */
+  }
+
+  .menu-items {
+      display: none; /* Esconde os itens do menu por padrão */
+      flex-direction: column; /* Muda para layout vertical */
+      position: absolute;
+      top: 60%; /* Posiciona logo abaixo do menu */
+      left: 0;
+      width: 100%;
+      background-color: #f9f9f9;
+      z-index: 9;
+
+
     }
 
-    .menu-items.active {
-        display: flex; /* Mostra o menu quando ativo */
-    }
+  .menu-items.active {
+      display: flex; /* Exibe os itens quando ativo */
+  }
 
-    .toggle-menu {
-        display: block; /* Mostra o ícone do menu em telas menores */
-        cursor: pointer; /* Muda o cursor ao passar sobre o ícone */
-    }
+  .menu-items ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
 
-    .menu {
-        flex-direction: column; /* Alinha logo e ícone em coluna */
-        align-items: flex-end; /* Alinha os itens à direita */
-    }
+  .menu-items li {
+      margin: 15px 0; /* Ajustado para manter proporção no dropdown */
+      text-align: center;
+      width: 90%;
+  }
 
-    .menu-items ul {
-        flex-direction: column; /* Alinha itens verticalmente */
-        width: 100%; /* Define a largura do menu */
-        padding: 0; /* Remove o padding */
-    }
+  .divider-vertical {
+      display: none; /* Remove os divisores no dropdown */
+  }
 
-    .menu-items li {
-        margin: 5px 0; /* Espaçamento entre os itens do menu */
-        text-align: center; /* Centraliza o texto */
-    }
 
-    .divider-vertical {
-        display: none; /* Esconde as divisórias em telas menores */
-    }
+  .menu-icon {
+   
+      max-height: 50px; /* Ajustado proporcionalmente */
+  }
 }

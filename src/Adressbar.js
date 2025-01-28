@@ -1,16 +1,14 @@
- import React from "react";
- import './Adressbar.css'
- 
- 
+import React from "react";
+import './Adressbar.css';
+import localizacao from './images/localizacao.png'
 
- const Adressbar = () => {
+const Adressbar = () => {
     return (
         <div className='adress-bar'>
-         
-            <p> Rua Cristiano Viana, 1182 - Cerqueira César
-                 05411-002</p>
+            <img src={localizacao} alt="endereço" className="ico-adress" />
+            <p>Rua Cristiano Viana, 1182 - Cerqueira César 05411-002</p>
         </div>
-    )
- }
+    );
+};
 
- export default Adressbar
+export default Adressbar;

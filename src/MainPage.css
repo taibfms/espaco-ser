@@ -1,3 +1,4 @@
+
 .profile-section {
   display: flex;
   flex-direction: column; /* Coloca os cards em uma coluna */
@@ -6,6 +7,7 @@
   position: relative;
 }
 
+
 .profile-card {
   display: flex;
   flex-direction: column; /* Mantém o conteúdo em coluna */
@@ -13,13 +15,29 @@
   border-radius: 350px; /* Aumenta o arredondamento das bordas */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.574);
   padding: 6rem;
-  max-width: 950px;  /* Largura máxima dos cards */
-  width: 100%;/*  Ajusta a largura dos cards para 100% */
+  max-width: 66%; /* Largura máxima dos cards */
+  width: 100%; /* Ajusta a largura dos cards para 100% */
   margin: 1rem 0; /* Adiciona espaço em cima e embaixo dos cards */
 }
 
+.profileprof-card{
+  display: flex;
+  flex-direction: column; /* Mantém o conteúdo em coluna */
+  background-color: #ffffff;
+  border-radius: 350px; /* Aumenta o arredondamento das bordas */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.574);
+  padding: 6rem;
+  max-width: 69%; /* Largura máxima dos cards */
+  width: 100%; /* Ajusta a largura dos cards para 100% */
+  margin: 1rem 0; /* Adiciona espaço em cima e embaixo dos cards */
+}
+
+
 .profile-content p {
   text-align: justify;
+  word-spacing: -1px;
+  letter-spacing: -1px;
+  font-size: 18px;
 }
 
 
@@ -33,117 +51,241 @@
   font-size: 1rem;
   font-weight: bold;
   margin-top: 1rem; /* Espaçamento acima do botão */
-  
 }
 
+/* Alinhamento de seções específicas */
 #profissionais,
 #espaco {
   align-self: flex-end; /* Alinha os cards 'Profissionais' e 'Espaço' à direita */
 }
 
+/* Hover no botão */
 .profile-button:hover {
   background-color: #3796a3;
 }
 
-
-
-
+/* Divisor horizontal */
 .divider-horizontal {
   width: 100%;
   height: 2px;
-  background-color:  #44ABB6; /* Cor do divisor */
+  background-color: #44ABB6; /* Cor do divisor */
   margin: 1rem 0; /* Espaçamento do divisor */
 }
 
-#title{
+/* Título */
+#title {
   font-family: "Playfair Display", serif;
+  text-align: left;
 }
 
+.title-espaco{
+  text-align: justify;
+  font-size: 18px;
+  white-space: 1px;
+}
 
+/* Imagem da seção "Sobre Nós" */
 .img-sobrenos {
   position: absolute; /* Permite posicionamento específico */
-  right: 0; /* Alinha a imagem ao lado direito do contêiner */
-  top: 160px; /* Ajuste a distância superior para alinhar ao texto */
-  width: 450px; /* Define a largura da imagem */
-  height: 300px; /* Define a altura da imagem */
-  box-shadow: 20px 20px 20px rgba(108, 104, 104, 0.59); /* Moldura sombreada */
-  border-radius: 8px; /* Opcional: canto arredondado */
-  margin-right: 150px;
+  right: calc(8%); /* Alinha a imagem ao lado direito do contêiner */
+  top: calc(7%); /* Ajuste a distância superior (equivale a 160px com base em 1rem = 16px) */
+  width: 28rem; /* Define a largura da imagem (equivale a 450px) */
+  height: 18.75rem; /* Define a altura da imagem (equivale a 300px) */
+  box-shadow: 1.25rem 1.25rem 1.25rem rgba(108, 104, 104, 0.59); /* Moldura sombreada */
+  border-radius: 0.5rem; /* Cantos arredondados (equivale a 8px) */
 }
 
+/* Imagem da seção "Profissionais" */
 .img-profissionais {
   position: absolute; /* Permite posicionamento específico */
-  left: 0; /* Alinha a imagem ao lado esquerdo do contêiner */
-  top: 699px; /* Ajusta a posição superior para alinhar ao texto */
-  width: 450px; /* Largura da imagem */
-  height: 300px; /* Altura da imagem */
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Moldura sombreada */
-  border-radius: 8px; /* Cantos arredondados */
-  margin-left: 120px; /* Espaço adicional da borda esquerda */
+  left: calc(4.5%); /* Alinha a imagem ao lado esquerdo do contêiner */
+  top: calc(31%); /* Ajusta a distância superior (equivale a 699px) */
+  width: 28rem; /* Largura da imagem (equivale a 450px) */
+  height: 18.75rem; /* Altura da imagem (equivale a 300px) */
+  box-shadow: 1.25rem 1.25rem 1.25rem rgba(0, 0, 0, 0.2); /* Moldura sombreada */
+  border-radius: 0.5rem; /* Cantos arredondados (equivale a 8px) */
+ 
 }
 
+/* Imagem da seção "Aluguel" */
 .img-aluguel {
   position: absolute; /* Permite posicionamento específico */
-  right: 0; /* Alinha a imagem ao lado direito do contêiner */
-  top: 1300px; /* Ajuste a distância superior para alinhar ao texto */
-  width: 450px; /* Define a largura da imagem */
-  height: 300px; /* Define a altura da imagem */
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Moldura sombreada */
-  border-radius: 8px; /* Opcional: canto arredondado */
-  margin-right: 120px;
+  right: calc(7%); /* Alinha a imagem ao lado direito do contêiner */
+  top: calc(57%); /* Ajuste a distância superior (equivale a 1300px) */
+  width: 28rem; /* Define a largura da imagem (equivale a 450px) */
+  height: 18.75rem; /* Define a altura da imagem (equivale a 300px) */
+  box-shadow: 1.25rem 1.25rem 1.25rem rgba(0, 0, 0, 0.2); /* Moldura sombreada */
+  border-radius: 0.5rem; /* Cantos arredondados (equivale a 8px) */
+ 
 }
 
+/* Imagem da seção "Espaço" */
 .img-espaco {
   position: absolute; /* Permite posicionamento específico */
-  left: 0; /* Alinha a imagem ao lado esquerdo do contêiner */
-  top: 1880px; /* Ajusta a posição superior para alinhar ao texto */
-  width: 450px; /* Largura da imagem */
-  height: 300px; /* Altura da imagem */
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Moldura sombreada */
-  border-radius: 8px; /* Cantos arredondados */
-  margin-left: 120px; /* Espaço adicional da borda esquerda */
+  left: calc(6%); /* Alinha a imagem ao lado esquerdo do contêiner */
+  top: calc(80%); /* Ajusta a posição superior (equivale a 1880px) */
+  width: 28rem; /* Largura da imagem (equivale a 450px) */
+  height: 18.75rem; /* Altura da imagem (equivale a 300px) */
+  box-shadow: 1.25rem 1.25rem 1.25rem rgba(0, 0, 0, 0.2); /* Moldura sombreada */
+  border-radius: 0.5rem; /* Cantos arredondados (equivale a 8px) */
+  
 }
 
-#wpp {
+.wpp {
+  background-color: #44ABB6;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem; /* Espaçamento acima do botão */
   text-decoration: none;
+  margin-right: 2rem;
+
+
+}
+.wpp-1{
+background-color: #44ABB6;
+color: #ffffff;
+padding: 0.5rem 1rem;
+margin-left: 2rem;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 1rem;
+font-weight: bold;
+margin-top: 5rem; /* Espaçamento acima do botão */
+text-decoration: none;
+margin-right: 2rem;
+
+
 }
 
 
-@media (max-width: 768px) {
-  .profile-section {
-    padding: 1rem; /* Diminui o padding da seção */
+#wpp{
+  margin-bottom: 1rem;
+}
+
+
+
+
+@media (max-width: 1179px) {
+  /* Garante que as imagens fiquem centralizadas e não sobreponham os cards */
+  .img-sobrenos,
+  .img-profissionais,
+  .img-aluguel,
+  .img-espaco {
+    display: block; /* Define as imagens como elementos de bloco */
+    margin: 0 auto 2rem; /* Centraliza horizontalmente e adiciona espaço inferior */
+    width: 90%; /* Define uma largura responsiva */
+    max-width: 600px; /* Garante que a imagem não fique muito grande */
+    height: auto; /* Mantém a proporção da imagem */
+    position: relative; /* Remove possíveis posicionamentos absolutos */
+  }
+   .img-profissionais{
+      left: 1rem;
+
+   }
+  /* Ajusta os cards de perfil */
+  .profile-card, .profileprof-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens dentro do card */
+    text-align: center; /* Centraliza o texto */
+    font-size: 22px;
+    padding: 1.5rem;
+    border-radius: 20px; /* Arredonda os cantos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto; /* Adiciona espaço ao redor dos cards e centraliza */
+    width: 98%; /* Garante que o card ocupe quase toda a tela */
+    max-width: 650px; /* Limita a largura máxima */
   }
 
-  .profile-card {
-    padding: 2rem; /* Diminui o padding do card */
-    border-radius: 20px; /* Diminui o arredondamento das bordas */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Ajusta a sombra */
+  /* Ajusta os botões nos cards */
+  .profile-button {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    align-self: center; /* Centraliza dentro do card */
+  }
+
+  /* Seção geral para evitar espaçamentos inconsistentes */
+  .profile-section {
+    padding: 1rem;
+    margin: 0 auto; /* Centraliza a seção */
+    text-align: center;
+  }
+
+  /* Espaçamento para evitar sobreposição */
+  .profile-section,
+  .img-sobrenos,
+  .img-profissionais,
+  .img-aluguel,
+  .img-espaco {
+    margin-bottom: 2rem; /* Adiciona espaço abaixo de cada elemento */
+  }
+
+  .profile-card p{
+    font-size: 17px;
+  }
+
+
+  /* Garante que os textos não tenham espaçamento extra */
+  .profile-section p,
+  .profile-card p {
+    text-align: start;
+    hyphens: auto; /* Permite hifenização automática */
+    overflow-wrap: break-word; /* Quebra palavras muito longas */
+    text-align: justify;
+    word-spacing: 2px;
+    word-break: break-word; /* Garante que palavras longas sejam quebradas */ line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+  }
+
+  /* Centraliza o contêiner das imagens e cards */
+  .container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
   }
 
   .img-sobrenos,
   .img-profissionais,
   .img-aluguel,
   .img-espaco {
-    position: relative; /* Altera a posição para relativa */
-    width: 100%; /* Largura das imagens para 100% */
-    height: auto; /* Altura automática para manter a proporção */
-    margin: 0 auto; /* Centraliza as imagens */
-    top: 0; /* Remove o posicionamento específico */
+    margin: 0 ;
+  }
+  .img-sobrenos{
+    right: -1.5rem;
+    
+  }
+  .img-aluguel{
+    left: 1rem;
   }
 
-  .img-sobrenos {
-    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+
+  #wpp{
+
+    align-items: center;
+    margin-left: 1rem;
+    margin-right:1rem ;
   }
-  
-  .img-profissionais {
-    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+
+
+  .wpp{
+
+    align-items: center;
+    margin-left: 1rem;
+    margin-right:1rem ;
   }
+
+
+  .aluguel-text{
+    
+    text-align: left;
+    word-break: break-word; /* Garante que palavras longas sejam quebradas */
+    text-align: justify;
   
-  .img-aluguel {
-    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
-  }
-  
-  .img-espaco {
-    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+    margin: 0;
   }
 }

@@ -105,6 +105,23 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
+@media (max-width: 1200px){
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+  }
+  
+  .contact-map h2 {
+    margin-bottom: 50px;
+  }
+
+
+} 
+
+
 @media (max-width: 768px) {
   .contact-container {
       flex-direction: column;

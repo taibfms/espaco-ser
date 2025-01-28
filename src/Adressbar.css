@@ -4,12 +4,13 @@
   color: white;
   padding: 0.5rem 2rem;
   display: flex;
-  align-items: center;
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   font-size: 1.5rem;
   top: 0;
   z-index: 1000;
   margin-top: 0;
+  text-align: center; /* Garante que o texto fique centralizado */
 }
 
 .ico-adress {
@@ -19,26 +20,19 @@
   vertical-align: middle; /* Garante que o ícone fique no meio da linha */
 }
 
+.adress-bar p {
+  margin: 0; /* Remove qualquer margem do parágrafo */
+  vertical-align: middle; /* Alinha o texto com o ícone */
+  display: inline-block; /* Faz o texto ocupar apenas o espaço necessário */
+}
 
-
-  
-  .top-bar p {
-  
-    margin: 0;
-    vertical-align: center;
-    
+@media only screen and (max-width: 414px) {
+  .adress-bar {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
   }
 
-  
-
-  @media only screen and (max-width: 414px) {
-    .adress-bar {
-      font-size: 0.8rem; 
-      padding: 0.5rem 1rem; 
-  
-    }
-  
-    .top-bar p {
-      font-size: 1rem;  
-    }
+  .adress-bar p {
+    font-size: 1rem;
   }
+}

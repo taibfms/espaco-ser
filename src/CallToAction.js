@@ -5,7 +5,7 @@ const CallToAction = () => {
   return (
     <section className="cta-section">
       <div className="cta-content">
-        <h2>Seu ser, sua jornada, seu espaço</h2>
+        <h2>Seu ser, Sua jornada, Seu espaço</h2>
         <p>
         
           

@@ -1,21 +1,17 @@
 .carousel img {
-    width: 100%; 
-    height: 416px; 
-    object-fit: cover; 
-  }
+  width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+  object-fit: contain; /* Mantém a imagem inteira visível sem distorções */
+}
 
+.carousel {
+  padding: 0 !important; /* Remove qualquer padding aplicado ao carrossel */
+  margin: 0 auto; /* Centraliza o carrossel */
+}
 
-  .carousel {
-    padding: 0 !important; /* Remove qualquer padding aplicado ao carrossel */
-    margin: 0 auto; /* Centraliza o carrossel */
-  }
-  
-  .carousel-item {
-    padding: 0 !important; /* Remove o padding interno dos itens do carrossel */
-  }
-  
-
-
+.carousel-item {
+  padding: 0 !important; /* Remove o padding interno dos itens do carrossel */
+}
 
 /* SimpleCarousel.css */
 
@@ -36,10 +32,25 @@
 }
 
 @media (max-width: 768px) {
-
-  .carousel img{
-    max-height: 250px;
-    
+  .carousel {
+  
+    height: auto; /* Garante que o carrossel respeite o tamanho automático */
   }
 
+  .carousel img {
+   
+    max-height: 100px; /* Aumenta a altura máxima das imagens */
+    height: 100px; /* Força a altura em dispositivos móveis */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+  }
+
+  .carousel-item {
+   
+    height: 100px; /* Garante que os itens acompanhem a altura definida */
+  }
+
+  .carousel-caption {
+    width: 80%; /* Ajusta a largura do texto para ocupar mais espaço em telas menores */
+    font-size: 0.9rem; /* Ajusta o tamanho do texto */
+  }
 }

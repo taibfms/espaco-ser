@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css';
+import endereco from './images/endereco.png'
 
 const Contact = () => {
   return (
@@ -7,7 +8,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-form">
           <h2 id='title'>Entre em Contato</h2>
-          <form action="https://formspree.io/f/mgvekvnw" method="POST">
+          <form action="https://formspree.io/f/mgvekvnw" method="POST" target='blank'>
             <div className="form-group">
               <label htmlFor="name">Nome:</label>
               <input type="text" id="name" name="name" required />
@@ -41,7 +42,9 @@ const Contact = () => {
               loading="lazy"
               style={{ border: '0' }}
             ></iframe>
-            <p>Rua Cristiano Viana, 1182 - Cerqueira César 05411-002</p>
+            <p>
+            <img src={endereco} alt="Ícone de Endereço" className="ico-adress" />
+              Rua Cristiano Viana, 1182 - Cerqueira César 05411-002</p>
           </div>
         </div>
       </div>

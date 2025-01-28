@@ -3,12 +3,11 @@ import './WhatsAppButton.css';
 import whatsappIcon from './images/whatsapp-icon.png'; // Caminho para o ícone do WhatsApp
 
 const WhatsAppButton = () => {
-  const whatsappNumber = '5511914262013'; // Número do WhatsApp com código do país
-  const whatsappMessage = 'Olá, gostaria de mais informações!'; // Mensagem pré-definida
+ 
 
   return (
     <a
-      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+      href="https://api.whatsapp.com/send?phone=5511914262013&text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" 
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"
