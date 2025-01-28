@@ -1,0 +1,101 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f7f7f7;
+  padding: 1rem;
+}
+
+.image-container img {
+  border-radius: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  margin-top: 6rem;
+  background-color: #f7f7f7;
+  font-family: "Playfair Display", serif;
+}
+
+.image-wrapper {
+  text-align: center;
+  position: relative;
+  margin: 0 10px;
+}
+
+.image-wrapper img {
+  width: 300px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 2.5s ease;
+}
+
+.image-wrapper:hover img {
+  filter: grayscale(0%);
+}
+
+/* Texto oculto por padrão */
+.image-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+  opacity: 0; 
+  transition: opacity 1.5s ease, max-height 1.5s ease; 
+  width: 300px; 
+  max-height: 0; 
+  overflow: hidden;
+  text-align: justify; 
+  display: flex;
+  flex-direction: column; /* Organiza título e texto em coluna */
+  align-items: flex-start; 
+  line-height: 1.4;
+  max-height: 0;
+  
+}
+
+/* Estilização do título dentro do texto */
+.image-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: #000; /* Deixa o título mais destacado */
+}
+
+/* Exibe o texto ao passar o mouse ou clicar na versão desktop */
+.image-wrapper:hover .image-text {
+  opacity: 1; 
+  max-height: 20em; /* Ajustado para acomodar o título e texto */
+}
+
+/* Estilização do link "Saiba Mais" */
+.image-text a {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-decoration: none; /* Remove o sublinhado */
+  color: #000; /* Texto preto */
+}
+
+.image-text a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.image-text a:active {
+  color: #000; /* Mantém preto mesmo ao clicar */
+}
+
+/* Adiciona media query para alinhar as imagens em coluna e ocultar o texto por padrão */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column; /* Coloca as imagens em coluna */
+    gap: 1rem; /* Adiciona espaço entre as imagens */
+    align-items: center;
+  }
+
+  /* O texto aparece ao clicar na versão mobile */
+  .image-wrapper .image-text {
+    opacity: 1; 
+    max-height: 10em; /* Garantindo que o texto e o título fiquem visíveis */
+  }
+}

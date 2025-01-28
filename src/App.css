@@ -1,0 +1,16 @@
+/* App.css */
+* {
+  box-sizing: border-box; /* Para incluir padding e border na largura total */
+  margin: 0; /* Remover margens de todos os elementos */
+  padding: 0; /* Remover preenchimentos de todos os elementos */
+}
+
+
+.App {
+  background-color: #f7f7f7; /* Cor de fundo desejada */
+
+}
+
+#root{
+ background-color:  #f7f7f7;
+}

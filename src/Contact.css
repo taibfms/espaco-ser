@@ -1,0 +1,140 @@
+.contact-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-form, .contact-map {
+  width: 48%;
+  display: flex; /* Adicionado para usar flexbox */
+  flex-direction: column; /* Para que os itens fiquem em coluna */
+  align-items: center; /* Centraliza os itens dentro do formulário */
+  margin: 0 auto; /* Centraliza o contêiner em relação ao seu pai */
+}
+
+.contact-form h2, .contact-map h2 {
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact-form h2::after, .contact-map h2::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background-color:  #44ABB6;
+  display: block;
+  margin: 10px auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%; /* Para ocupar toda a largura disponível */
+  max-width: 400px; /* Ajusta a largura máxima do grupo de formulário */
+  border-radius: 5px;
+}
+
+#title{
+  
+    font-family: "Playfair Display", serif;
+  
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 500px; 
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.captcha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.captcha label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color:  #44ABB6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto; /* Centraliza o botão de envio */
+}
+
+button[type="submit"]:hover {
+  background-color:  #44ABB6;
+}
+
+.contact-map .map {
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact-map .map iframe {
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-map .map p {
+  font-size: 26px;
+  color: #000000;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .contact-form, .contact-map {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Muda a direção para coluna */
+  }
+
+  .contact-form, .contact-map {
+    width: 100%; /* Ocupa 100% da largura */
+  }
+
+  /* Manter a aparência e as propriedades */
+  .form-group input, .form-group textarea {
+    width: 100%; /* Largura total nos inputs */
+    max-width: none; /* Remove a largura máxima */
+  }
+
+  .contact-map .map iframe {
+    width: 100%; /* Largura total no iframe do mapa */
+  }
+
+  .contact-map .map p {
+    font-size: 20px; /* Ajusta o tamanho da fonte, se necessário */
+  }
+}

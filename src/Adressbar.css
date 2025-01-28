@@ -1,0 +1,44 @@
+.adress-bar {
+  width: 100%;
+  background-color: #44ABB6;
+  color: white;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  font-size: 1.5rem;
+  top: 0;
+  z-index: 1000;
+  margin-top: 0;
+}
+
+.ico-adress {
+  width: 20px; /* Define o tamanho exato do ícone */
+  height: 20px; /* Define a altura para alinhamento */
+  margin-right: 0.5rem; /* Espaço entre o ícone e o texto */
+  vertical-align: middle; /* Garante que o ícone fique no meio da linha */
+}
+
+
+
+  
+  .top-bar p {
+  
+    margin: 0;
+    vertical-align: center;
+    
+  }
+
+  
+
+  @media only screen and (max-width: 414px) {
+    .adress-bar {
+      font-size: 0.8rem; 
+      padding: 0.5rem 1rem; 
+  
+    }
+  
+    .top-bar p {
+      font-size: 1rem;  
+    }
+  }

@@ -1,0 +1,149 @@
+.profile-section {
+  display: flex;
+  flex-direction: column; /* Coloca os cards em uma coluna */
+  padding: 2rem;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column; /* Mantém o conteúdo em coluna */
+  background-color: #ffffff;
+  border-radius: 350px; /* Aumenta o arredondamento das bordas */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.574);
+  padding: 6rem;
+  max-width: 950px;  /* Largura máxima dos cards */
+  width: 100%;/*  Ajusta a largura dos cards para 100% */
+  margin: 1rem 0; /* Adiciona espaço em cima e embaixo dos cards */
+}
+
+.profile-content p {
+  text-align: justify;
+}
+
+
+.profile-button {
+  background-color: #44ABB6;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem; /* Espaçamento acima do botão */
+  
+}
+
+#profissionais,
+#espaco {
+  align-self: flex-end; /* Alinha os cards 'Profissionais' e 'Espaço' à direita */
+}
+
+.profile-button:hover {
+  background-color: #3796a3;
+}
+
+
+
+
+.divider-horizontal {
+  width: 100%;
+  height: 2px;
+  background-color:  #44ABB6; /* Cor do divisor */
+  margin: 1rem 0; /* Espaçamento do divisor */
+}
+
+#title{
+  font-family: "Playfair Display", serif;
+}
+
+
+.img-sobrenos {
+  position: absolute; /* Permite posicionamento específico */
+  right: 0; /* Alinha a imagem ao lado direito do contêiner */
+  top: 160px; /* Ajuste a distância superior para alinhar ao texto */
+  width: 450px; /* Define a largura da imagem */
+  height: 300px; /* Define a altura da imagem */
+  box-shadow: 20px 20px 20px rgba(108, 104, 104, 0.59); /* Moldura sombreada */
+  border-radius: 8px; /* Opcional: canto arredondado */
+  margin-right: 150px;
+}
+
+.img-profissionais {
+  position: absolute; /* Permite posicionamento específico */
+  left: 0; /* Alinha a imagem ao lado esquerdo do contêiner */
+  top: 699px; /* Ajusta a posição superior para alinhar ao texto */
+  width: 450px; /* Largura da imagem */
+  height: 300px; /* Altura da imagem */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Moldura sombreada */
+  border-radius: 8px; /* Cantos arredondados */
+  margin-left: 120px; /* Espaço adicional da borda esquerda */
+}
+
+.img-aluguel {
+  position: absolute; /* Permite posicionamento específico */
+  right: 0; /* Alinha a imagem ao lado direito do contêiner */
+  top: 1300px; /* Ajuste a distância superior para alinhar ao texto */
+  width: 450px; /* Define a largura da imagem */
+  height: 300px; /* Define a altura da imagem */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Moldura sombreada */
+  border-radius: 8px; /* Opcional: canto arredondado */
+  margin-right: 120px;
+}
+
+.img-espaco {
+  position: absolute; /* Permite posicionamento específico */
+  left: 0; /* Alinha a imagem ao lado esquerdo do contêiner */
+  top: 1880px; /* Ajusta a posição superior para alinhar ao texto */
+  width: 450px; /* Largura da imagem */
+  height: 300px; /* Altura da imagem */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Moldura sombreada */
+  border-radius: 8px; /* Cantos arredondados */
+  margin-left: 120px; /* Espaço adicional da borda esquerda */
+}
+
+#wpp {
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 1rem; /* Diminui o padding da seção */
+  }
+
+  .profile-card {
+    padding: 2rem; /* Diminui o padding do card */
+    border-radius: 20px; /* Diminui o arredondamento das bordas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Ajusta a sombra */
+  }
+
+  .img-sobrenos,
+  .img-profissionais,
+  .img-aluguel,
+  .img-espaco {
+    position: relative; /* Altera a posição para relativa */
+    width: 100%; /* Largura das imagens para 100% */
+    height: auto; /* Altura automática para manter a proporção */
+    margin: 0 auto; /* Centraliza as imagens */
+    top: 0; /* Remove o posicionamento específico */
+  }
+
+  .img-sobrenos {
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+  }
+  
+  .img-profissionais {
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+  }
+  
+  .img-aluguel {
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+  }
+  
+  .img-espaco {
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+  }
+}

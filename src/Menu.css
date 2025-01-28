@@ -1,0 +1,89 @@
+.menu {
+    display: flex; /* Flexbox para o menu */
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 10px 20px; 
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color:  #f9f9f9;
+}
+
+.logo img {
+    max-height: 100px; /* Limita a altura da logo */
+}
+
+.menu-items {
+    display: flex; /* Mostra o menu em telas grandes */
+    flex-direction: row; /* Alinha itens horizontalmente */
+}
+
+.menu-items ul {
+    display: flex; /* Flexbox para os itens do menu */
+    margin: 0; 
+    padding: 0; 
+    font-size: larger;
+    list-style: none; /* Remove os marcadores dos itens do menu */
+}
+
+.menu-items li {
+    margin: 10px;
+}
+
+.menu-items a {
+    text-decoration: none; 
+    color: #333; /* Cor do texto */
+}
+
+.menu-items a:hover {
+    color: #007BFF; 
+    transition: color 0.3s; 
+}
+
+.toggle-menu {
+    display: none; /* Esconde o ícone do menu por padrão */
+}
+
+.divider-vertical {
+    width: 2px;
+    height: 20px; /* Tamanho da linha divisória */
+    background-color: #44ABB6;
+    align-self: center; /* Centraliza verticalmente */
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        display: none; /* Esconde o menu por padrão em telas menores */
+        flex-direction: column; /* Alinha itens verticalmente em telas menores */
+    }
+
+    .menu-items.active {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    .toggle-menu {
+        display: block; /* Mostra o ícone do menu em telas menores */
+        cursor: pointer; /* Muda o cursor ao passar sobre o ícone */
+    }
+
+    .menu {
+        flex-direction: column; /* Alinha logo e ícone em coluna */
+        align-items: flex-end; /* Alinha os itens à direita */
+    }
+
+    .menu-items ul {
+        flex-direction: column; /* Alinha itens verticalmente */
+        width: 100%; /* Define a largura do menu */
+        padding: 0; /* Remove o padding */
+    }
+
+    .menu-items li {
+        margin: 5px 0; /* Espaçamento entre os itens do menu */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .divider-vertical {
+        display: none; /* Esconde as divisórias em telas menores */
+    }
+}
